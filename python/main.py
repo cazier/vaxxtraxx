@@ -24,12 +24,13 @@ def get_due_dates(start, rate_span, rate_frequency, nb=3):
     Returns:
         list[arrow.Arrow]: each of upcoming due dates
     """
-    pass
+    return [start.shift(**{rate_span: rate_frequency * i}) for i in range(1, nb + 1)]
+
 
 
 def is_overdue(due_date, check_date, strict=True):
-    """When supplied two dates, return whether the user is overdue. i.e., the current (`check_date`) is after the due
-    date.
+    """When supplied two dates, return whether the user is overdue. i.e., the current (`check_date`)
+    is after the due date.
 
     ```python
     >>> due = arrow.get('2022-01-05')
@@ -46,4 +47,7 @@ def is_overdue(due_date, check_date, strict=True):
     Returns:
         bool: True if you are overdue for a vaccine, false if all is good!
     """
-    pass
+    if strict:
+        return due_date <= check_date
+    
+    return due_date < check_date
