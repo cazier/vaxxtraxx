@@ -1,7 +1,7 @@
 # Python
 
 ## Dependencies
- 1. [Arrow](https://arrow.readthedocs.io/en/latest/index.html) - Python *does* include a library to manage dates and tiems. However, it can be a bit of a headache to work with when manipulating date intervals.
+ 1. [Arrow](https://arrow.readthedocs.io/en/latest/index.html) - Python *does* include a library to manage dates and times. However, it can be a bit of a headache to work with when manipulating date intervals.
 
      - The link above goes to the Arrow documentation. That should give you some of the details for how to do things like create an arrow *object* for a particular date.
      - Further, you can look into some of the other parts of the documentation/API reference to get things like ***shift***ing an Arrow object by specific date spans.
