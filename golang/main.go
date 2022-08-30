@@ -57,30 +57,10 @@ func is_overdue(due_date time.Time, check_date time.Time, strict ...bool) bool {
 	}
 
 	if due_date.Equal(check_date) {
-		if _strict == true {
-			return true
-		}
-		return false
+		return _strict
 	} else if due_date.Before(check_date) {
 		return true
 	} else {
 		return false
 	}
-}
-
-func printHelper(printable []time.Time) {
-	for i := 0; i < len(printable); i++ {
-		fmt.Println(printable[0])
-	}
-}
-func main() {
-	if dates, err := get_due_dates(time.Now(), "months", 2); err != nil {
-		fmt.Println(err)
-	} else {
-		printHelper(dates)
-	}
-	var start time.Time = time.Date(2020, 2, 5, 0, 0, 0, 0, time.Local)
-	var check time.Time = time.Date(2020, 2, 5, 0, 0, 0, 0, time.Local)
-	fmt.Println(is_overdue(start, check))
-	// fmt.Println(get_due_dates(time.Now(), "Fifteen", 2, 12))
 }
