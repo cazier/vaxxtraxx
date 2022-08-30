@@ -4,6 +4,7 @@ import arrow
 
 import main
 
+
 class TestGettingDueDates(unittest.TestCase):
     def test_months(self):
         date = arrow.get("2020-02-26")
