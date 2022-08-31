@@ -237,4 +237,10 @@ Cargo.lock
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
 
+# Ignore all files in the rust directory that don't end in .rs or .md
+# This can probably replace all the other rust stuff...
+rust/*
+!rust/*.rs
+!rust/*.md
+
 # End of https://www.toptal.com/developers/gitignore/api/python,go,rust,macos
