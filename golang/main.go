@@ -15,6 +15,7 @@ func (err *DateTimeError) Error() string {
 
 func get(date_string string) (result time.Time, err error) {
 	// Note that Go matches against THIS SPECIFIC DATE to determine the parser expectations
+	// The full date is 01/02 03:04:05 2006 UTC+7
 	return time.Parse("2006-01-02", date_string)
 }
 

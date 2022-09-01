@@ -43,7 +43,7 @@ func TestGetDueDates_months(t *testing.T) {
 }
 
 func TestGetDueDates_leap_years(t *testing.T) {
-	t.Skip("To maintain equality with python, leap years are just going to be ignored.")
+	t.Skip("Actually, leap years are only \"different\" in Go. Python == Rust...")
 	var date time.Time = get_safe("2020-02-29")
 	resp, err := get_due_dates(date, "years", 1, 4)
 	expected := []time.Time{

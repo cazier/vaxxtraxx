@@ -14,7 +14,6 @@ class TestGettingDueDates(unittest.TestCase):
             arrow.get("2021-08-26"),
         ]
 
-    @unittest.skip("Arrow does kind of strange things with leap years.")
     def test_leap_years(self):
         date = arrow.get("2020-02-29")
         assert main.get_due_dates(date, "years", 1, 4) == [
