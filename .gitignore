@@ -244,3 +244,8 @@ rust/*
 !rust/*.md
 
 # End of https://www.toptal.com/developers/gitignore/api/python,go,rust,macos
+
+
+# Added by cargo
+
+/target
